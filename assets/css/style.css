@@ -169,6 +169,11 @@ main>section>p {
     position: relative;
     color: var(--secondary);
     background: center / cover no-repeat url(../images/refactor_crop.jpg);
+    filter: grayscale(50%);
+    transition: filter .15s ease-in-out;
+}
+.workflex .card:hover {
+    filter: grayscale(0%)
 }
 
 .workflex .card#tie {
