@@ -2,6 +2,7 @@
     --primary: darkblue;
     --secondary: #1e3a38;
     --tertiary: #d9dcd6;
+    --card-color: rgb(132, 192, 172);
 }
 
 * {
@@ -13,7 +14,7 @@
 /* default body bg color */
 body {
     background-color: var(--tertiary);
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 /* header - background and font */
@@ -66,14 +67,14 @@ main>section {
 main>section>h2 {
     text-align: right;
     flex: 0 0 100px;
-    border-right: 3px solid var(--primary);
+    border-right: 3px solid var(--secondary);
     margin-right: 10px;
     padding: 10px;
     font-size: 40px;
 }
 
 main>section>img {
-    height: 250px;
+    height: 150px;
     padding: 10px;
 }
 
@@ -92,16 +93,26 @@ main>section>p {
 
 .workflex .card {
     display: inline-block;
-    border: 5px solid rgb(132, 192, 172);
+    border: 5px solid var(--card-color);
     height: 200px;
     margin: 10px;
     background: center / cover no-repeat url(../images/1up.png);
+    height: 100px;
+    position: relative;
+}
+
+.workflex .card-caption {
+    position: absolute;
+    bottom: 10px;
+    padding: 5px;
+    background-color: var(--card-color);
 }
 
 .workflex .card:first-child {
     width: 100%;
+    height: 250px
 }
 
 .workflex .card:not(:first-child) {
-    flex: 1;
+    flex: 1 0 40%;
 }
